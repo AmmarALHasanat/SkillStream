@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SkillStream.Models;
 
 namespace SkillStream.Entities
 {
@@ -7,5 +8,7 @@ namespace SkillStream.Entities
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+        public DbSet<Test> Tests { get; set; }
+
     }
 }
